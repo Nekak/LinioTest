@@ -21,6 +21,13 @@
 		05C0A91120D0B06E00C84380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A91020D0B06E00C84380 /* AppDelegate.swift */; };
 		05C0A91820D0B07000C84380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C0A91720D0B07000C84380 /* Assets.xcassets */; };
 		05C0A91B20D0B07000C84380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C0A91920D0B07000C84380 /* LaunchScreen.storyboard */; };
+		4C6376F320D1771800E3FF5A /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6376F120D1771800E3FF5A /* HeaderCollectionReusableView.swift */; };
+		4C6376F420D1771800E3FF5A /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C6376F220D1771800E3FF5A /* HeaderCollectionReusableView.xib */; };
+		4C6376F720D1AC8E00E3FF5A /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6376F620D1AC8E00E3FF5A /* FavoritesViewModel.swift */; };
+		4C6376FB20D1B19200E3FF5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6376FA20D1B19200E3FF5A /* Extensions.swift */; };
+		4C6376FD20D1B1F300E3FF5A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6376FC20D1B1F300E3FF5A /* BaseViewController.swift */; };
+		4C6376FF20D1B8B900E3FF5A /* MyFavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6376FE20D1B8B900E3FF5A /* MyFavoritesViewModel.swift */; };
+		4C63770120D1BD9400E3FF5A /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63770020D1BD9400E3FF5A /* ProductsViewModel.swift */; };
 		68EF843B37474BE02E61CAAB /* Pods_LinioFavorites.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5255E792FF194990D8E09921 /* Pods_LinioFavorites.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +48,13 @@
 		05C0A91720D0B07000C84380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05C0A91A20D0B07000C84380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05C0A91C20D0B07000C84380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C6376F120D1771800E3FF5A /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		4C6376F220D1771800E3FF5A /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		4C6376F620D1AC8E00E3FF5A /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		4C6376FA20D1B19200E3FF5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4C6376FC20D1B1F300E3FF5A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4C6376FE20D1B8B900E3FF5A /* MyFavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesViewModel.swift; sourceTree = "<group>"; };
+		4C63770020D1BD9400E3FF5A /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		5255E792FF194990D8E09921 /* Pods_LinioFavorites.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinioFavorites.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FA5A4313653DA7BD35CA3F /* Pods-LinioFavorites.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinioFavorites.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinioFavorites/Pods-LinioFavorites.release.xcconfig"; sourceTree = "<group>"; };
 		F8D5FF1F270784655AE34F27 /* Pods-LinioFavorites.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinioFavorites.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinioFavorites/Pods-LinioFavorites.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +101,7 @@
 		05B48B2220D0B28B000C89E2 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4C6376FC20D1B1F300E3FF5A /* BaseViewController.swift */,
 				05B48B2320D0B28B000C89E2 /* FavoritesViewController.swift */,
 			);
 			path = controllers;
@@ -99,6 +114,8 @@
 				05B48B2820D0BC1B000C89E2 /* UserFavoritesCollectionViewCell.xib */,
 				05B48B2B20D0BC2C000C89E2 /* FavoritesCollectionViewCell.swift */,
 				05B48B2C20D0BC2C000C89E2 /* FavoritesCollectionViewCell.xib */,
+				4C6376F120D1771800E3FF5A /* HeaderCollectionReusableView.swift */,
+				4C6376F220D1771800E3FF5A /* HeaderCollectionReusableView.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -108,6 +125,7 @@
 			children = (
 				05B48B3020D0C025000C89E2 /* NetworkManager.swift */,
 				05B48B3220D0C0AB000C89E2 /* Constants.swift */,
+				4C6376FA20D1B19200E3FF5A /* Extensions.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -147,12 +165,23 @@
 				05B48B2220D0B28B000C89E2 /* controllers */,
 				05B48B2F20D0C008000C89E2 /* helpers */,
 				05B48B3420D0C2D9000C89E2 /* model */,
+				4C6376F520D1AC6500E3FF5A /* viewModel */,
 				05B48B2020D0B28B000C89E2 /* views */,
 				05C0A91720D0B07000C84380 /* Assets.xcassets */,
 				05C0A91920D0B07000C84380 /* LaunchScreen.storyboard */,
 				05C0A91C20D0B07000C84380 /* Info.plist */,
 			);
 			path = LinioFavorites;
+			sourceTree = "<group>";
+		};
+		4C6376F520D1AC6500E3FF5A /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C6376F620D1AC8E00E3FF5A /* FavoritesViewModel.swift */,
+				4C6376FE20D1B8B900E3FF5A /* MyFavoritesViewModel.swift */,
+				4C63770020D1BD9400E3FF5A /* ProductsViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +246,7 @@
 			files = (
 				05C0A91B20D0B07000C84380 /* LaunchScreen.storyboard in Resources */,
 				05B48B2E20D0BC2C000C89E2 /* FavoritesCollectionViewCell.xib in Resources */,
+				4C6376F420D1771800E3FF5A /* HeaderCollectionReusableView.xib in Resources */,
 				05B48B2A20D0BC1B000C89E2 /* UserFavoritesCollectionViewCell.xib in Resources */,
 				05B48B2420D0B28B000C89E2 /* FavoritesViewController.xib in Resources */,
 				05C0A91820D0B07000C84380 /* Assets.xcassets in Resources */,
@@ -271,14 +301,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C6376FF20D1B8B900E3FF5A /* MyFavoritesViewModel.swift in Sources */,
+				4C6376FD20D1B1F300E3FF5A /* BaseViewController.swift in Sources */,
 				05B48B2920D0BC1B000C89E2 /* UserFavoritesCollectionViewCell.swift in Sources */,
+				4C63770120D1BD9400E3FF5A /* ProductsViewModel.swift in Sources */,
+				4C6376F720D1AC8E00E3FF5A /* FavoritesViewModel.swift in Sources */,
 				05B48B3820D0C37F000C89E2 /* Owner.swift in Sources */,
 				05B48B3A20D0C407000C89E2 /* Product.swift in Sources */,
 				05B48B2520D0B28B000C89E2 /* FavoritesViewController.swift in Sources */,
 				05B48B3120D0C025000C89E2 /* NetworkManager.swift in Sources */,
 				05B48B2D20D0BC2C000C89E2 /* FavoritesCollectionViewCell.swift in Sources */,
+				4C6376FB20D1B19200E3FF5A /* Extensions.swift in Sources */,
 				05B48B3620D0C311000C89E2 /* Favorites.swift in Sources */,
 				05C0A91120D0B06E00C84380 /* AppDelegate.swift in Sources */,
+				4C6376F320D1771800E3FF5A /* HeaderCollectionReusableView.swift in Sources */,
 				05B48B3320D0C0AB000C89E2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
