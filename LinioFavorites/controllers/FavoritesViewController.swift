@@ -91,7 +91,6 @@ class FavoritesViewController: BaseViewController, UICollectionViewDelegate, UIC
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, for: indexPath) as? HeaderCollectionReusableView
         
         headerView?.lTitle.text = indexPath.section == 1 ? "Todos mis favoritos (\(favoritesViewModel.getFavoritesCount()))" : ""
-        
         headerView?.backgroundColor = UIColor.clear
         
         return headerView!
@@ -132,6 +131,8 @@ class FavoritesViewController: BaseViewController, UICollectionViewDelegate, UIC
             
             let pvm = favoritesViewModel.getProductsViewModel(forIndex: indexPath.row)
             
+            cell?.putRibbons(plus: pvm.linioPlusLevel, andImported: pvm.imported, andCondition: pvm.conditionType, andFreeShipping: pvm.freeShipping)
+            
             if let url = URL(string: pvm.imageUrl) {
                 cell?.imageView.af_setImage(withURL: url)
             }
@@ -152,6 +153,6 @@ class FavoritesViewController: BaseViewController, UICollectionViewDelegate, UIC
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: 0, height: 40)
+        return CGSize(width: 0, height: section == 0 ? 20 : 40)
     }
 }

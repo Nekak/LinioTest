@@ -62,6 +62,10 @@ class FavoritesViewModel: NSObject {
     }
     
     func getMyFavoritesViewModel(forIndex index: Int) -> MyFavoritesViewModel{
+        guard index < self.arrFavorites.count else {
+            return MyFavoritesViewModel(name: "", quantity: 0, url1: nil, url2: nil, url3: nil)
+        }
+        
         let favorites = self.arrFavorites[index]
         
         var url1:String? = nil
@@ -80,16 +84,16 @@ class FavoritesViewModel: NSObject {
             url1 = favorites.productList[0].image
         }
         
-        let mfvm = MyFavoritesViewModel(name: favorites.name, quantity: favorites.productList.count, url1: url1, url2: url2, url3: url3)
-        
-        return mfvm
+        return MyFavoritesViewModel(name: favorites.name, quantity: favorites.productList.count, url1: url1, url2: url2, url3: url3)
     }
     
     func getProductsViewModel(forIndex index: Int) -> ProductsViewModel{
+        guard index < self.arrAllProducts.count else {
+            return ProductsViewModel(imageUrl: "", linioPlusLevel: 0, conditionType: "", freeShipping: false, imported: false)
+        }
+        
         let product = self.arrAllProducts[index]
         
-        let pvm = ProductsViewModel(imageUrl: product.image, linioPlusLevel: product.linioPlusLevel, conditionType: product.conditionType, freeShipping: product.freeShipping, imported: product.imported)
-        
-        return pvm
+        return ProductsViewModel(imageUrl: product.image, linioPlusLevel: product.linioPlusLevel, conditionType: product.conditionType, freeShipping: product.freeShipping, imported: product.imported)
     }
 }
